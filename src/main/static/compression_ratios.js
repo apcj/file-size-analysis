@@ -1,0 +1,146 @@
+compressionAnalysis = [
+{ fileName: "active_tx_log", statistics: [
+] },
+{ fileName: "index.db", statistics: [
+] },
+{ fileName: "messages.log", statistics: [
+{ blockSize: 1024, min: 0.30078125, average: 0.3915349786931818, max: 0.576171875, totalSize: 45443},
+{ blockSize: 2048, min: 0.22607421875, average: 0.26258433948863635, max: 0.3896484375, totalSize: 45443},
+{ blockSize: 4096, min: 0.1640625, average: 0.1971768465909091, max: 0.286376953125, totalSize: 45443},
+{ blockSize: 8192, min: 0.1226806640625, average: 0.1648681640625, max: 0.2066650390625, totalSize: 45443},
+{ blockSize: 16384, min: 0.14837646484375, average: 0.15753173828125, max: 0.16668701171875, totalSize: 45443},
+{ blockSize: 32768, min: 0.146087646484375, average: 0.146087646484375, max: 0.146087646484375, totalSize: 45443}] },
+{ fileName: "neostore", statistics: [
+] },
+{ fileName: "neostore.id", statistics: [
+] },
+{ fileName: "neostore.nodestore.db", statistics: [
+{ blockSize: 1024, min: 0.5185546875, average: 0.6671516749244449, max: 0.7724609375, totalSize: 8809711},
+{ blockSize: 2048, min: 0.46484375, average: 0.598408368874971, max: 0.6826171875, totalSize: 8809711},
+{ blockSize: 4096, min: 0.4521484375, average: 0.5835427643531976, max: 0.654296875, totalSize: 8809711},
+{ blockSize: 8192, min: 0.4635009765625, average: 0.5889576898619187, max: 0.63818359375, totalSize: 8809711},
+{ blockSize: 16384, min: 0.4776611328125, average: 0.6028502622352188, max: 0.643310546875, totalSize: 8809711},
+{ blockSize: 32768, min: 0.500091552734375, average: 0.6166623243645056, max: 0.64813232421875, totalSize: 8809711},
+{ blockSize: 65536, min: 0.530303955078125, average: 0.6203174875743354, max: 0.6462860107421875, totalSize: 8809711},
+{ blockSize: 131072, min: 0.5549087524414062, average: 0.6224861714377332, max: 0.6418304443359375, totalSize: 8809711},
+{ blockSize: 262144, min: 0.5844612121582031, average: 0.6246832645300663, max: 0.6393280029296875, totalSize: 8809711},
+{ blockSize: 524288, min: 0.5936145782470703, average: 0.6253252029418945, max: 0.6379661560058594, totalSize: 8809711},
+{ blockSize: 1048576, min: 0.6111183166503906, average: 0.6255449056625366, max: 0.6342315673828125, totalSize: 8809711}] },
+{ fileName: "neostore.nodestore.db.id", statistics: [
+] },
+{ fileName: "neostore.propertystore.db", statistics: [
+{ blockSize: 1024, min: 0.1298828125, average: 0.336630597012577, max: 0.5087890625, totalSize: 152537620},
+{ blockSize: 2048, min: 0.06787109375, average: 0.24531707986978224, max: 0.384765625, totalSize: 152537620},
+{ blockSize: 4096, min: 0.03466796875, average: 0.19392363223558337, max: 0.30322265625, totalSize: 152537620},
+{ blockSize: 8192, min: 0.0179443359375, average: 0.16708846701715224, max: 0.26220703125, totalSize: 152537620},
+{ blockSize: 16384, min: 0.00946044921875, average: 0.15327528022413736, max: 0.239013671875, totalSize: 152537620},
+{ blockSize: 32768, min: 0.005126953125, average: 0.14843650350765306, max: 0.23187255859375, totalSize: 152537620},
+{ blockSize: 65536, min: 0.0030517578125, average: 0.14737243390052576, max: 0.2330322265625, totalSize: 152537620},
+{ blockSize: 131072, min: 0.0130157470703125, average: 0.1471898414303492, max: 0.2284088134765625, totalSize: 152537620},
+{ blockSize: 262144, min: 0.017017364501953125, average: 0.1471602658191359, max: 0.22610855102539062, totalSize: 152537620},
+{ blockSize: 524288, min: 0.018968582153320312, average: 0.14719962416024043, max: 0.22112274169921875, totalSize: 152537620},
+{ blockSize: 1048576, min: 0.024858474731445312, average: 0.14716208885455953, max: 0.21094608306884766, totalSize: 152537620}] },
+{ fileName: "neostore.propertystore.db.arrays", statistics: [
+{ blockSize: 1024, min: 0.14453125, average: 0.2381262173191338, max: 0.6103515625, totalSize: 87176032},
+{ blockSize: 2048, min: 0.0830078125, average: 0.15972656341769254, max: 0.41552734375, totalSize: 87176032},
+{ blockSize: 4096, min: 0.053466796875, average: 0.1166019433423977, max: 0.27001953125, totalSize: 87176032},
+{ blockSize: 8192, min: 0.0321044921875, average: 0.0900518121424502, max: 0.19873046875, totalSize: 87176032},
+{ blockSize: 16384, min: 0.02001953125, average: 0.07343510219029017, max: 0.15557861328125, totalSize: 87176032},
+{ blockSize: 32768, min: 0.01385498046875, average: 0.06289969996402138, max: 0.126983642578125, totalSize: 87176032},
+{ blockSize: 65536, min: 0.0107574462890625, average: 0.057090231529752115, max: 0.11248779296875, totalSize: 87176032},
+{ blockSize: 131072, min: 0.009246826171875, average: 0.05422221018855733, max: 0.10512542724609375, totalSize: 87176032},
+{ blockSize: 262144, min: 0.00865936279296875, average: 0.05282504300037062, max: 0.08844757080078125, totalSize: 87176032},
+{ blockSize: 524288, min: 0.0082855224609375, average: 0.05223144393369376, max: 0.08269119262695312, totalSize: 87176032},
+{ blockSize: 1048576, min: 0.011490821838378906, average: 0.05189685361931123, max: 0.07721996307373047, totalSize: 87176032}] },
+{ fileName: "neostore.propertystore.db.arrays.id", statistics: [
+{ blockSize: 1024, min: 0.3662109375, average: 0.4423353243861338, max: 0.546875, totalSize: 2127409},
+{ blockSize: 2048, min: 0.30078125, average: 0.37138493120785165, max: 0.45458984375, totalSize: 2127409},
+{ blockSize: 4096, min: 0.28662109375, average: 0.341552734375, max: 0.410888671875, totalSize: 2127409},
+{ blockSize: 8192, min: 0.29296875, average: 0.3337482467121139, max: 0.3868408203125, totalSize: 2127409},
+{ blockSize: 16384, min: 0.3109130859375, average: 0.3338253997093023, max: 0.37225341796875, totalSize: 2127409},
+{ blockSize: 32768, min: 0.324462890625, average: 0.3383054733276367, max: 0.36175537109375, totalSize: 2127409},
+{ blockSize: 65536, min: 0.3349151611328125, average: 0.3446826934814453, max: 0.357574462890625, totalSize: 2127409},
+{ blockSize: 131072, min: 0.33594512939453125, average: 0.34433889389038086, max: 0.35425567626953125, totalSize: 2127409},
+{ blockSize: 262144, min: 0.33860015869140625, average: 0.34415626525878906, max: 0.3515892028808594, totalSize: 2127409},
+{ blockSize: 524288, min: 0.3414020538330078, average: 0.3442726135253906, max: 0.3473682403564453, totalSize: 2127409},
+{ blockSize: 1048576, min: 0.3424816131591797, average: 0.34452009201049805, max: 0.3465585708618164, totalSize: 2127409}] },
+{ fileName: "neostore.propertystore.db.id", statistics: [
+{ blockSize: 1024, min: 0.32421875, average: 0.35658924883445114, max: 0.4033203125, totalSize: 12520329},
+{ blockSize: 2048, min: 0.2646484375, average: 0.2971230146051448, max: 0.3291015625, totalSize: 12520329},
+{ blockSize: 4096, min: 0.23681640625, average: 0.2824970664778305, max: 0.31201171875, totalSize: 12520329},
+{ blockSize: 8192, min: 0.2464599609375, average: 0.284551490663858, max: 0.3165283203125, totalSize: 12520329},
+{ blockSize: 16384, min: 0.24835205078125, average: 0.2931729461510144, max: 0.3270263671875, totalSize: 12520329},
+{ blockSize: 32768, min: 0.25634765625, average: 0.30458939637189136, max: 0.33648681640625, totalSize: 12520329},
+{ blockSize: 65536, min: 0.27215576171875, average: 0.3174454454352094, max: 0.3421630859375, totalSize: 12520329},
+{ blockSize: 131072, min: 0.27127838134765625, average: 0.3174974943462171, max: 0.34000396728515625, totalSize: 12520329},
+{ blockSize: 262144, min: 0.27428436279296875, average: 0.31789487473508143, max: 0.33823394775390625, totalSize: 12520329},
+{ blockSize: 524288, min: 0.274566650390625, average: 0.31833831123683765, max: 0.33620643615722656, totalSize: 12520329},
+{ blockSize: 1048576, min: 0.29424285888671875, average: 0.31799299066716974, max: 0.33374500274658203, totalSize: 12520329}] },
+{ fileName: "neostore.propertystore.db.index", statistics: [
+] },
+{ fileName: "neostore.propertystore.db.index.id", statistics: [
+] },
+{ fileName: "neostore.propertystore.db.index.keys", statistics: [
+{ blockSize: 1024, min: 0.4208984375, average: 0.4208984375, max: 0.4208984375, totalSize: 1832}] },
+{ fileName: "neostore.propertystore.db.index.keys.id", statistics: [
+] },
+{ fileName: "neostore.propertystore.db.strings", statistics: [
+{ blockSize: 1024, min: 0.21875, average: 0.41615977297342127, max: 0.61328125, totalSize: 13118614},
+{ blockSize: 2048, min: 0.1337890625, average: 0.2894245371048009, max: 0.4677734375, totalSize: 13118614},
+{ blockSize: 4096, min: 0.087646484375, average: 0.21752746696400688, max: 0.367431640625, totalSize: 13118614},
+{ blockSize: 8192, min: 0.0792236328125, average: 0.17730960691071987, max: 0.2947998046875, totalSize: 13118614},
+{ blockSize: 16384, min: 0.06585693359375, average: 0.15359481811523437, max: 0.2384033203125, totalSize: 13118614},
+{ blockSize: 32768, min: 0.0689697265625, average: 0.13843780517578125, max: 0.2039794921875, totalSize: 13118614},
+{ blockSize: 65536, min: 0.0637969970703125, average: 0.12849380493164062, max: 0.1805572509765625, totalSize: 13118614},
+{ blockSize: 131072, min: 0.06586456298828125, average: 0.12319717407226563, max: 0.16119384765625, totalSize: 13118614},
+{ blockSize: 262144, min: 0.06487655639648438, average: 0.120611572265625, max: 0.15156936645507812, totalSize: 13118614},
+{ blockSize: 524288, min: 0.07061576843261719, average: 0.11937057495117187, max: 0.14864730834960938, totalSize: 13118614},
+{ blockSize: 1048576, min: 0.09301376342773438, average: 0.11822136243184407, max: 0.1389751434326172, totalSize: 13118614}] },
+{ fileName: "neostore.propertystore.db.strings.id", statistics: [
+{ blockSize: 1024, min: 0.3359375, average: 0.3359375, max: 0.3359375, totalSize: 1553}] },
+{ fileName: "neostore.relationshipstore.db", statistics: [
+{ blockSize: 1024, min: 0.1298828125, average: 0.5041452869991523, max: 0.671875, totalSize: 179382909},
+{ blockSize: 2048, min: 0.06787109375, average: 0.4179602987746749, max: 0.57080078125, totalSize: 179382909},
+{ blockSize: 4096, min: 0.03466796875, average: 0.3734456982281391, max: 0.5078125, totalSize: 179382909},
+{ blockSize: 8192, min: 0.0179443359375, average: 0.34970094585231426, max: 0.4837646484375, totalSize: 179382909},
+{ blockSize: 16384, min: 0.00946044921875, average: 0.33830303043007287, max: 0.4669189453125, totalSize: 179382909},
+{ blockSize: 32768, min: 0.005126953125, average: 0.3345069704066239, max: 0.459747314453125, totalSize: 179382909},
+{ blockSize: 65536, min: 0.0186767578125, average: 0.3334997621033808, max: 0.4576873779296875, totalSize: 179382909},
+{ blockSize: 131072, min: 0.03134918212890625, average: 0.3325638798942343, max: 0.45113372802734375, totalSize: 179382909},
+{ blockSize: 262144, min: 0.034637451171875, average: 0.3321108957480269, max: 0.4364814758300781, totalSize: 179382909},
+{ blockSize: 524288, min: 0.04410362243652344, average: 0.3319400820815772, max: 0.40622520446777344, totalSize: 179382909},
+{ blockSize: 1048576, min: 0.08254146575927734, average: 0.33183095608538354, max: 0.3843975067138672, totalSize: 179382909}] },
+{ fileName: "neostore.relationshipstore.db.id", statistics: [
+{ blockSize: 1024, min: 0.32421875, average: 0.36553401880163994, max: 0.408203125, totalSize: 8179881},
+{ blockSize: 2048, min: 0.26806640625, average: 0.30290675270718576, max: 0.3330078125, totalSize: 8179881},
+{ blockSize: 4096, min: 0.2431640625, average: 0.28729776794097395, max: 0.312744140625, totalSize: 8179881},
+{ blockSize: 8192, min: 0.2481689453125, average: 0.2906165113429985, max: 0.3184814453125, totalSize: 8179881},
+{ blockSize: 16384, min: 0.2501220703125, average: 0.30007414731807364, max: 0.329345703125, totalSize: 8179881},
+{ blockSize: 32768, min: 0.260101318359375, average: 0.311572706842997, max: 0.3372802734375, totalSize: 8179881},
+{ blockSize: 65536, min: 0.2735748291015625, average: 0.3244446785219254, max: 0.3429718017578125, totalSize: 8179881},
+{ blockSize: 131072, min: 0.27306365966796875, average: 0.32460747995684225, max: 0.34152984619140625, totalSize: 8179881},
+{ blockSize: 262144, min: 0.28348541259765625, average: 0.32467405257686494, max: 0.3408012390136719, totalSize: 8179881},
+{ blockSize: 524288, min: 0.3092079162597656, average: 0.32538299560546874, max: 0.34091758728027344, totalSize: 8179881},
+{ blockSize: 1048576, min: 0.3115234375, average: 0.32451261792864117, max: 0.3369331359863281, totalSize: 8179881}] },
+{ fileName: "neostore.relationshiptypestore.db", statistics: [
+] },
+{ fileName: "neostore.relationshiptypestore.db.id", statistics: [
+] },
+{ fileName: "neostore.relationshiptypestore.db.names", statistics: [
+{ blockSize: 1024, min: 0.419921875, average: 0.419921875, max: 0.419921875, totalSize: 1574}] },
+{ fileName: "neostore.relationshiptypestore.db.names.id", statistics: [
+] },
+{ fileName: "nioneo_logical.log.active", statistics: [
+] },
+{ fileName: "tm_tx_log.1", statistics: [
+{ blockSize: 1024, min: 0.33984375, average: 0.35519935344827586, max: 0.39453125, totalSize: 29785},
+{ blockSize: 2048, min: 0.2548828125, average: 0.2666713169642857, max: 0.30810546875, totalSize: 29785},
+{ blockSize: 4096, min: 0.20751953125, average: 0.21623883928571427, max: 0.252685546875, totalSize: 29785},
+{ blockSize: 8192, min: 0.18603515625, average: 0.19388834635416666, max: 0.2078857421875, totalSize: 29785},
+{ blockSize: 16384, min: 0.18621826171875, average: 0.18621826171875, max: 0.18621826171875, totalSize: 29785}] },
+{ fileName: "tm_tx_log.2", statistics: [
+{ blockSize: 1024, min: 0.3427734375, average: 0.3892372532894737, max: 0.40234375, totalSize: 20458},
+{ blockSize: 2048, min: 0.2626953125, average: 0.2976345486111111, max: 0.30615234375, totalSize: 20458},
+{ blockSize: 4096, min: 0.228759765625, average: 0.24609375, max: 0.251953125, totalSize: 20458},
+{ blockSize: 8192, min: 0.2200927734375, average: 0.2252197265625, max: 0.2303466796875, totalSize: 20458},
+{ blockSize: 16384, min: 0.21630859375, average: 0.21630859375, max: 0.21630859375, totalSize: 20458}] }];;

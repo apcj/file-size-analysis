@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File Size Analysis</title>
+    <script type="text/javascript" src="d3.js"></script>
+    <script type="text/javascript" src="compression_ratios.js"></script>
+    <script type="text/javascript" src="compression_chart.js"></script>
+    <style type="text/css">
+
+        body {
+        font: 10px sans-serif;
+        }
+
+        /*svg {
+                shape-rendering: crispEdges;
+                }*/
+
+		path {
+		    stroke: steelblue;
+		    stroke-width: 2;
+		    fill: none;
+		}
+
+		line {
+		    stroke: black;
+		}
+
+		text {
+		    font-family: Arial;
+		    font-size: 9pt;
+		}
+    </style>
+</head>
+<body>
+    <h1>Compression Ratio Analysis</h1>
+    <div class="chart"></div>
+    <script type="text/javascript">
+        draw_chart();
+    </script>
+</body>
+</html>

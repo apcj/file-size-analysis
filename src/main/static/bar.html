@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File Size Analysis</title>
+    <script type="text/javascript" src="d3.js"></script>
+    <script type="text/javascript" src="listing.js"></script>
+    <script type="text/javascript" src="analysis.js"></script>
+    <script type="text/javascript" src="draw_chart.js"></script>
+    <style type="text/css">
+
+        body {
+        font-family: sans-serif;
+        }
+
+        svg {
+        shape-rendering: crispEdges;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Neo4j store file size analysis</h1>
+	<p class="analysistarget"></p>
+	<h2>Original file sizes with Neo4j 1.4</h2>
+    <div class="chart original"></div>
+	<h2>Reduced file sizes with proposed store changes</h2>
+	<p>This chart shows reduced file sizes after applying a number of store changes, including:</p>
+	<ol>
+		<li>Introduce a new ShortArray data type, similar to the existing ShortString data type, that allows many array values to be packed directly into Property records.  This reduced the number of records required in the array store files, and avoids potential IO cost of following pointers into the array store.</li>
+		<li>Pack multiple primitive properties into single property record to reduce the number of property records required and reduce the number of hops required to read the chain of properties for a given node or relationship.</li>
+		<li>Extend the data block of the Property record so the previous two changes are more effective, and the data to overhead ratio in these records is improved.</li>
+		<li>Remove unnecessary fields from the property record to offset the impact of increasing the size of the data block for nodes and relationships that do not have enough properties to benefit from property packing.</li>
+		<li>Remove unnecessary fields from dynamic stores (the array and string stores).
+	</ol>
+    <div class="chart reduced"></div>
+    <script type="text/javascript">
+        draw_chart();
+    </script>
+</body>
+</html>
