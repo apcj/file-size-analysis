@@ -23,7 +23,7 @@ public class ReportGenerator {
 
         new FileLister().list(root, reportDirectory);
         new ReductionPotentialAnalyser().analyse(root, reportDirectory);
-//        copyStaticFiles(reportDirectory);
+        copyStaticFiles(reportDirectory);
     }
 
     private void copyStaticFiles(File reportDirectory) throws IOException {
