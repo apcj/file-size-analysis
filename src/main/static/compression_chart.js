@@ -1,5 +1,4 @@
 draw_chart = function() {
-	var data = compressionAnalysis[2].statistics;
 	var a = function(field) { return function(d) { return d[field]; }; };
 	var curry = function(fna, fnb) { return function(d) { return fna(fnb(d)); }};
     var translate = function(fnx, fny) { return function(d, i) { return "translate(" + fnx(d, i) + "," + fny(d, i) +")"; }};
@@ -20,14 +19,16 @@ draw_chart = function() {
 	var g = vis.append("svg:g")
 	    .attr("transform", translate(fixed(m.left), fixed(m.top)));
 	
-		var line = d3.svg.line()
-		    .x(curry(x, a("blockSize")))
-		    .y(curry(y, a("average")));
+	var line = d3.svg.line()
+	    .x(curry(x, a("blockSize")))
+	    .y(curry(y, a("average")));
 
-	for (var i = 0; i < compressionAnalysis.length; i++) {
-		g.append("svg:path").attr("d", line(compressionAnalysis[i].statistics));
-	}
-	
+	g.selectAll("path")
+		.data(compressionAnalysis)
+		.enter().append("svg:path")
+		.attr("stroke", curry(d3.scale.category20c(), a("fileName")))
+		.attr("d", curry(line, a("statistics")));
+		
 	g.append("svg:line")
 	    .attr("x1", 0)
 	    .attr("y1", h)
@@ -54,7 +55,7 @@ draw_chart = function() {
     hRules.append("svg:line")
         .attr("x1", 0)
         .attr("x2", w)
-        .attr("stroke", "black");
+        .attr("stroke", "lightgrey");
 
     hRules.append("svg:text")
         .attr("x", -9)
@@ -75,7 +76,7 @@ draw_chart = function() {
     vRules.append("svg:line")
         .attr("y1", 0)
         .attr("y2", h)
-        .attr("stroke", "white");
+        .attr("stroke", "lightgrey");
 
     vRules.append("svg:g").attr("transform", "rotate(90 0 " + (h + 9) + ")").append("svg:text")
         .attr("y", h + 9)
