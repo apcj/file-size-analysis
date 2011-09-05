@@ -12,7 +12,7 @@ import java.util.List;
 
 public class FileLister {
 
-    public void list(String root, File reportDirectory) throws IOException {
+    public Listing list(String root) throws IOException {
         File rootFolder = new File(root);
         @SuppressWarnings({"unchecked"})
         Collection<File> files = FileUtils.listFiles(rootFolder, TrueFileFilter.INSTANCE, TrueFileFilter.INSTANCE);
@@ -24,14 +24,30 @@ public class FileLister {
                     folder(rootFolder, file), file.getName(), file.length()));
         }
 
-        PrintWriter writer = new PrintWriter(new FileOutputStream(new File(reportDirectory, "listing.js")));
-        writer.println("root = \"" + rootFolder.getName() + "\";");
-        writer.println("listing = [\n" + StringUtils.join(elements, ",\n") + "\n];");
-        writer.close();
+        return new Listing(rootFolder, elements);
     }
 
     private String folder(File locationDir, File file) {
         return file.getParentFile().getAbsolutePath().substring(locationDir.getAbsolutePath().length());
+    }
+
+    public static class Listing {
+        private File rootFolder;
+        private List<String> elements;
+
+        private Listing(File rootFolder, List<String> elements) {
+            this.rootFolder = rootFolder;
+            this.elements = elements;
+        }
+
+        public void writeTo(String variableName, File file) throws IOException {
+            PrintWriter writer = new PrintWriter(new FileOutputStream(file));
+            writer.println(variableName + " = {");
+            writer.println("root: \"" + rootFolder.getName() + "\",");
+            writer.println("listing: [\n" + StringUtils.join(elements, ",\n") + "\n]");
+            writer.println("};");
+            writer.close();
+        }
     }
 
 }

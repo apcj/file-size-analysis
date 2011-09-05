@@ -1,12 +1,12 @@
 draw_chart = function() {
-	d3.select(".analysistarget").text("Analysing: " + root);
+	d3.select(".analysistarget").text("Analysing: " + originalStore.root);
 	
 	var nameToReduction = {};
-	analysis.map(function(d) { nameToReduction[d.name] = d.reductionRatio; });
+	reducedStore.listing.map(function(d) { nameToReduction[d.name] = d.size; });
 	
-	listing.map(function(d) {
+	originalStore.listing.map(function(d) {
 		if (nameToReduction[d.name]) {
-			d.reducedSize = d.size * (1 - nameToReduction[d.name]);
+			d.reducedSize = nameToReduction[d.name];
 		} else {
 			d.reducedSize = d.size;
 		}
@@ -20,14 +20,14 @@ draw_chart = function() {
     var eq = function(expected) { return function(d) { return expected === d; }};
     var greaterThan = function(threshold) { return function(d) { return d > threshold; }};
 
-    var largeFiles = listing.filter(curry(eq(""), folder)).filter(curry(greaterThan(1000000), size));
-    var indexFiles = listing.filter(function(f) { return f.folder.indexOf("/index") === 0; });
+    var largeFiles = originalStore.listing.filter(curry(eq(""), folder)).filter(curry(greaterThan(1000000), size));
+    var indexFiles = originalStore.listing.filter(function(f) { return f.folder.indexOf("/index") === 0; });
     var indexes = { name: "indexes", size: d3.sum(indexFiles, size) };
 	indexes.reducedSize = indexes.size;
     largeFiles.push(indexes);
     var data = largeFiles.sort(function(a, b) { return b.size - a.size; });
 
-	var total = function(sizeFunction) { return d3.sum(listing, sizeFunction); };
+	var total = function(sizeFunction) { return d3.sum(originalStore.listing, sizeFunction); };
 	
     var featuredSize = d3.sum(data, size);
 	var remainder = { name: "remainder", size: total(size) - featuredSize };
