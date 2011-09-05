@@ -152,6 +152,12 @@ draw_chart = function() {
 	        .attr("fill", "steelblue")
 	        .attr("width", curry(x, reducedSize))
 	        .attr("height", y.rangeBand());
+
+	    bars.append("svg:rect")
+	        .attr("fill", "red")
+			.attr("x", curry(x, size))
+	        .attr("width", curry(x, function(d) { return d.size < d.reducedSize ? d.reducedSize - d.size : 0; }))
+	        .attr("height", y.rangeBand());
 	});
 	
 	vis2.append("svg:text")
