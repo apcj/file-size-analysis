@@ -14,7 +14,7 @@ draw_chart = function() {
 	var vis = d3.select("body")
 	    .append("svg:svg")
 	    .attr("width", w + m.left + m.right)
-	    .attr("height", h + m.top + m.bottom)
+	    .attr("height", h + m.top + m.bottom + 300)
 
 	var g = vis.append("svg:g")
 	    .attr("transform", translate(fixed(m.left), fixed(m.top)));
@@ -23,12 +23,34 @@ draw_chart = function() {
 	    .x(curry(x, a("blockSize")))
 	    .y(curry(y, a("average")));
 
+	var filesWithStatistics = compressionAnalysis.filter(function(d) { return d.statistics.length > 0; });
+	var colour = curry(d3.scale.category20b(), a("fileName"));
+	
 	g.selectAll("path")
-		.data(compressionAnalysis)
+		.data(filesWithStatistics)
 		.enter().append("svg:path")
-		.attr("stroke", curry(d3.scale.category20c(), a("fileName")))
+		.attr("stroke", colour)
 		.attr("d", curry(line, a("statistics")));
-		
+	
+	var legendItem = g.append("svg:g").attr("class", "legend")
+		.attr("transform", translate(fixed(0), fixed(h + 100)))
+		.selectAll("g.legendItem")
+		.data(filesWithStatistics)
+		.enter().append("svg:g")
+		.attr("class", "legendItem")
+		.attr("transform", translate(fixed(100), function(d, i) { return i * 20; }));
+	
+	legendItem.append("svg:line")
+		.attr("x1", 0)
+		.attr("x2", 100)
+		.attr("stroke-width", 2)
+		.attr("stroke", function(d, i) { console.log (d); console.log(i); return colour(d); });
+	
+	legendItem.append("svg:text")
+		.attr("y", 5)
+		.attr("x", 110)
+		.text(a("fileName"));
+
 	g.append("svg:line")
 	    .attr("x1", 0)
 	    .attr("y1", h)
